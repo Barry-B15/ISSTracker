@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--4.1 To put the position on the map we use leaflet.js copy this from site -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <!-- 4.2 leaflet.js requires that we put this below the 1st css file above -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+    <!--4.4 last requirement, map neeeds height or it will assume 0 and not show -->
+    <style>
+        #issMap {
+            height: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  the fetch() function
+    all we need is the url address of the api , we put that in the fetch function 
+    we call the fetch() function and back comes the data -->
+
+    <!-- 3.0 put the data on the page -->
+    <h1>Where is the ISS?</h1>
+    <!-- 3.1 def the lat lon ids -->
+    <p>
+        latitude: <span id="lat">lat</span>&deg; <br> longitude: <span id="lon">lon</span>&deg;
+    </p>
+
+    <!-- 4.3 another leaflet requirement. create a div for the map -->
+    <div id="issMap"></div>
+
+
+    <script src="js/wheresISS.js"></script>
+</body>
+
+</html>
